@@ -1,35 +1,32 @@
-// 1. Declarar variables (cantidad, suma, promedio, array)
-// 2. Pedir cantidad al usuario
-// 3. FOR 1: llenar el array con scanf
-// 4. FOR 2: sumar todos los números
-// 5. Calcular promedio = suma / cantidad  (con float)
-// 6. Mostrar suma y promedio
-
 #include <stdio.h>
 int main(void)
 {
+  // variables
   int cantidad;
   int suma = 0;
   float promedio;
   int numeros[100];
 
+  // pedir cantidad
   printf("Ingrese la cantidad de numeros que calcularas.\n");
   scanf("%d", &cantidad);
-
+  
+  // llenar el array con scanf
   for(int i = 0; i < cantidad; i++)
   {
     printf("Numero %d: ", i + 1);
     scanf("%d", &numeros[i]);
   }
+  // sumar todos los numeros del array
   for(int i = 0; i < cantidad; i++)
   {
   suma += numeros[i];
   }
+  // resultados
   promedio = (float)suma / cantidad;
   printf("Resultados.\n");
   printf("%d\n", suma);
   printf("Promedio: %d/%d : %.2f\n", suma, cantidad, promedio);
-
 
     return 0;
 }
