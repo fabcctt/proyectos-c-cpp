@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
 void verificar_usuario(std::string usuarioVerificado, std::string usuario);
 void verificar_contrasenia(std::string contraseniaVerificada, std::string contrasenia);
 int main()
@@ -15,7 +16,7 @@ int main()
     std::cout << "Cual era su usuario\n";
     std::cin >> usuarioVerificado;
     verificar_usuario(usuarioVerificado, usuario);
-    
+
     std::cout << "Cual era su contrasena\n";
     std::cin >> contraseniaVerificada;
     verificar_contrasenia(contraseniaVerificada, contrasenia);
@@ -47,4 +48,3 @@ void verificar_contrasenia(std::string contraseniaVerificada, std::string contra
         std::exit(0);
     }
 }
-
