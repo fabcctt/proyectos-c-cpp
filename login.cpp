@@ -33,7 +33,7 @@ void verificar_usuario(std::string usuarioVerificado, std::string usuario)
     else
     {
         std::cout << "Usuario Incorrecto.\n";
-        exit(0);
+        std::exit(0);
     }
 }
 void verificar_contrasenia(std::string contraseniaVerificada, std::string contrasenia)
@@ -45,7 +45,7 @@ void verificar_contrasenia(std::string contraseniaVerificada, std::string contra
     else
     {
         std::cout << "Contrasena incorecta.\n";
-        exit(0);
+        std::exit(0);
     }
 }
 
