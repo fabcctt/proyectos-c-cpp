@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-using namespace std;
 void verificar_usuario(std::string usuarioVerificado, std::string usuario);
 void verificar_contrasenia(std::string contraseniaVerificada, std::string contrasenia);
 int main()
