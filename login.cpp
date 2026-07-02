@@ -1,81 +1,50 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
-void verificar_usuario(string usuarioVerificado, string usuario);
-void verificar_contrasenia(string contraseniaVerificada, string contrasenia);
-
+void verificar_usuario(std::string usuarioVerificado, std::string usuario);
+void verificar_contrasenia(std::string contraseniaVerificada, std::string contrasenia);
 int main()
-
 {
-
-    string usuario;
-
-    string contrasenia;
-
-    string usuarioVerificado, contraseniaVerificada;
-
-    cout << "Bienvenido, cual es su usuario\n";
-
-    cin >> usuario;
-
-    cout << "Hola " << usuario << ", " << "Cual es su contrasenia\n";
-
-    cin >> contrasenia;
-
-    cout << "==Bienvenido al inicio de sesion==\n";
-
-    cout << "Cual era su usuario\n";
-
-    cin >> usuarioVerificado;
-
+    std::string usuario;
+    std::string contrasenia;
+    std::string usuarioVerificado, contraseniaVerificada;
+    std::cout << "Bienvenido, cual es su usuario\n";
+    std::cin >> usuario;
+    std::cout << "Hola " << usuario << ", " << "Cual es su contrasenia\n";
+    std::cin >> contrasenia;
+    std::cout << "==Bienvenido al inicio de sesion==\n";
+    std::cout << "Cual era su usuario\n";
+    std::cin >> usuarioVerificado;
     verificar_usuario(usuarioVerificado, usuario);
-
-    cout << "Cual era su contrasena\n";
-
-    cin >> contraseniaVerificada;
-
+    
+    std::cout << "Cual era su contrasena\n";
+    std::cin >> contraseniaVerificada;
     verificar_contrasenia(contraseniaVerificada, contrasenia);
 
     return 0;
 }
 
-void verificar_usuario(string usuarioVerificado, string usuario)
-
+void verificar_usuario(std::string usuarioVerificado, std::string usuario)
 {
-
     if (usuarioVerificado == usuario)
-
     {
-
-        cout << "Usuario correcto.\n";
+        std::cout << "Usuario correcto.\n";
     }
-
     else
-
     {
-
-        cout << "Usuario Incorrecto.\n";
+        std::cout << "Usuario Incorrecto.\n";
         exit(0);
     }
 }
-
-void verificar_contrasenia(string contraseniaVerificada, string contrasenia)
-
+void verificar_contrasenia(std::string contraseniaVerificada, std::string contrasenia)
 {
-
     if (contraseniaVerificada == contrasenia)
-
     {
-
-        cout << "Contrasena correcta.\n";
+        std::cout << "Contrasena correcta.\n";
     }
-
     else
-
     {
-
-        cout << "Contrasena incorecta.\n";
+        std::cout << "Contrasena incorecta.\n";
         exit(0);
     }
 }
