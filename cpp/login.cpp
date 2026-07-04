@@ -1,50 +1,50 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-void verificar_usuario(std::string usuarioVerificado, std::string usuario);
-void verificar_contrasenia(std::string contraseniaVerificada, std::string contrasenia);
+void verify_user(std::string verifiedUser, std::string user);
+void verify_password(std::string verifiedPassword, std::string password);
 int main()
 {
-    std::string usuario;
-    std::string contrasenia;
-    std::string usuarioVerificado, contraseniaVerificada;
-    std::cout << "Bienvenido, cual es su usuario\n";
-    std::cin >> usuario;
-    std::cout << "Hola " << usuario << ", " << "Cual es su contrasenia\n";
-    std::cin >> contrasenia;
-    std::cout << "==Bienvenido al inicio de sesion==\n";
-    std::cout << "Cual era su usuario\n";
-    std::cin >> usuarioVerificado;
-    verificar_usuario(usuarioVerificado, usuario);
+    std::string user;
+    std::string password;
+    std::string verifiedUser, verifiedPassword;
+    std::cout << "Welcome, What´s your username?: ";
+    std::cin >> user;
+    std::cout << "Hello " << user << ", " << "What´s your password?: ";
+    std::cin >> password;
+    std::cout << "==Welcome to Log In.==\n";
+    std::cout << "What was your username?: \n";
+    std::cin >> verifiedUser;
+    verify_user(verifiedUser, user);
 
-    std::cout << "Cual era su contrasena\n";
-    std::cin >> contraseniaVerificada;
-    verificar_contrasenia(contraseniaVerificada, contrasenia);
+    std::cout << "What was your password?: ";
+    std::cin >> verifiedPassword;
+    verify_password(verifiedPassword, password);
 
     return 0;
 }
 
-void verificar_usuario(std::string usuarioVerificado, std::string usuario)
+void verify_user(std::string verifiedUser, std::string user)
 {
-    if (usuarioVerificado == usuario)
+    if (verifiedUser == user)
     {
-        std::cout << "Usuario correcto.\n";
+        std::cout << "Correct username.\n";
     }
     else
     {
-        std::cout << "Usuario Incorrecto.\n";
+        std::cout << "Incorrect username.\n";
         std::exit(0);
     }
 }
-void verificar_contrasenia(std::string contraseniaVerificada, std::string contrasenia)
+void verify_password(std::string verifiedPassword, std::string password)
 {
-    if (contraseniaVerificada == contrasenia)
+    if (verifiedPassword == password)
     {
-        std::cout << "Contrasena correcta.\n";
+        std::cout << "Correct password.\n";
     }
     else
     {
-        std::cout << "Contrasena incorecta.\n";
+        std::cout << "Incorrect password\n";
         std::exit(0);
     }
 }
