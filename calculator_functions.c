@@ -55,7 +55,7 @@ int main(void)
     }
    }
    else{
-    printf("Wrong Option. Choose a number beetwen 1 up to 100.\n");
+    printf("Wrong Option. Choose a number between 1 up to 4.\n");
    }
     return 0;
 }
