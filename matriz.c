@@ -3,11 +3,11 @@ int main(void)
 {
     int matriz[3][2] = {
         {1, 2}, {3, 4}, {5, 6}};
-    for (int fila = 0; fila < 3; fila++)
+    for (int row = 0; fila < 3; row++)
     {
-        for (int columna = 0; columna < 2; columna++)
+        for (int columne = 0; columne < 2; columne++)
         {
-            printf("%d\n", matriz[fila][columna]);
+            printf("%d\n", matriz[row][columne]);
         }
     }
     return 0;
