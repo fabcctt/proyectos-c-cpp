@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-void user_register();
+void sign_up();
 void log_in();
 void game();
 int secretnumber(void)
@@ -16,7 +16,7 @@ int main(void)
     int password;
     int password_try;
 
-    user_register();
+    sign_up();
     printf("Welcome to the guessing game, what´s your user?: ");
     fgets(user, 50, stdin);
     user[strcspn(user, "\n")] = 0;
@@ -75,7 +75,7 @@ int main(void)
     } while (result == 'y');
     return 0;
 }
-void user_register()
+void sign_up()
 {
     printf("=======Register=======\n");
 }
