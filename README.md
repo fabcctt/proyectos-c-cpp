@@ -24,3 +24,5 @@ Following:
 - Understand the logic behind every line of code, not just copy-paste solutions
 - Practice one concept at a time, building on the previous one
 - Currently learning: **Pointers** (C, Chapter 11)...
+## Note
+Spanish is my native language, but I write all code (variables, functions, comments, commit messages) in English, as a habit built from the start
