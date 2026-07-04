@@ -5,29 +5,29 @@
 int main(void)
 {
     srand(time(NULL));
-    int secreto = rand() % 100 + 1, intento = 0, contador = 0;
+    int secret = rand() % 100 + 1, guess = 0, counter = 0;
 
-    while (intento != secreto)
-
-        printf("Escoja un numero (1 al 100)\n");
-    scanf("%d", &intento);
-    contador++;
-
-    if (intento == secreto)
+    while (guess != secret)
     {
-        printf("Acertastes, numero de intentos: %d\n", contador);
-    }
-    else
-    {
-        if (intento > secreto)
+        printf("Choose a number. (1 up to 100)\n");
+     scanf("%d", &guess);
+     counter++;
+
+     if (guess == secret)
+      {
+        printf("Correct number. The number was: %d\n", counter);
+      }
+     else
+      {
+        if (guess > secret)
         {
-            printf("Numero Alto.\n");
+            printf("You entered a High number. Try again\n");
         }
         else
         {
-            printf("Numero Bajo.\n");
+            printf("You entered a Low number.\n");
         }
+      }
     }
-
     return 0;
 }
