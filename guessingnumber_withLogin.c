@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-void Register();
-void Log_In();
-void Game();
-int SecretNumber(void)
+void user_register();
+void log_in();
+void game();
+int secretnumber(void)
 {
     return rand() % 100 + 1;
 }
@@ -16,7 +16,7 @@ int main(void)
     int password;
     int password_try;
 
-    Register();
+    user_register();
     printf("Welcome to the guessing game, what´s your user?: ");
     fgets(user, 50, stdin);
     user[strcspn(user, "\n")] = 0;
@@ -24,7 +24,7 @@ int main(void)
     scanf("%d", &password);
     system("cls");
 
-    Log_In();
+    log_in();
     printf("Hello %s, what was you password to log in?: ", user);
     scanf("%d", &password_try);
 
@@ -45,7 +45,7 @@ int main(void)
     {
         int guess = 0;
         int counter = 0;
-        int secret = SecretNumber();
+        int secret = secretnumber();
         game();
         while (guess != secret)
         {
@@ -75,17 +75,17 @@ int main(void)
     } while (result == 'y');
     return 0;
 }
-void Register()
+void user_register()
 {
     printf("=======Register=======\n");
 }
 
-void Iniciar_Sesion()
+void log_in()
 {
     printf("=======Log_In=======\n");
 }
 
-void Game()
+void game()
 {
     printf("=======Guessing number Game=======\n");
 }
