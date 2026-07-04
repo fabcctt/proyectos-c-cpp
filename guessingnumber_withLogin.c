@@ -56,7 +56,7 @@ int main(void)
     
             if (guess == secret)
             {
-                printf("You did it. The secret number was: %d\n", secreto, contador);
+                printf("You did it. The secret number was: %d\n", secret);
             }
             else
             {
