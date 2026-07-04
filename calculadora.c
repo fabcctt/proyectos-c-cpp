@@ -1,46 +1,44 @@
 #include <stdio.h>
-
 int main(void)
 {
-  int opcion;
+  int option;
   float num1, num2;
 
-  printf("Escoja su operacion.\n");
-  printf("1. Sumar\n");
-  printf("2. Restar\n");
-  printf("3. Dividir\n");
-  printf("4. Multiplicar\n");
-  scanf("%d", &opcion);
+  printf("Choose your operation.\n");
+  printf("1. Sum\n");
+  printf("2. Rest\n");
+  printf("3. Divide\n");
+  printf("4. Multiplicate\n");
+  scanf("%d", &option);
 
-  if (opcion >= 1 && opcion <= 4)
+  if (option >= 1 && option <= 4)
   {
-    printf("Ingrese el primer numero:\n");
+    printf("Enter the first number: ");
     scanf("%f", &num1);
-    printf("Ingrese el segundo numero:\n");
+    printf("Enter the first number: ");
     scanf("%f", &num2);
 
-    switch (opcion)
+    switch (option)
     {
         case 1:
-        printf("Calculo: %.2f + %.2f: %.2f.\n", num1, num2, num1 + num2);
+        printf("Calculation: %.2f + %.2f: %.2f.\n", num1, num2, num1 + num2);
         break;
 
         case 2:
-        printf("Calculo: %.2f - %.2f: %.2f.", num1, num2, num1 - num2);
+        printf("Calculation: %.2f - %.2f: %.2f.", num1, num2, num1 - num2);
         break;
 
         case 3:
-        printf("Calculo: %.2f / %.2f: %.2f.", num1, num2, num1 / num2);
+        printf("Calculation: %.2f / %.2f: %.2f.", num1, num2, num1 / num2);
         break;
 
         case 4:
-        printf("Calculo: %.2f . %.2f: %.2f.", num1, num2, num1 * num2);
-
+        printf("Calculation: %.2f . %.2f: %.2f.", num1, num2, num1 * num2);
     }
   }
     else
     {
-      printf("Opcion Invalida, eliga entre 1 al 4.\n");
+      printf("Wrong Option, Choose a number between 1 up to 100. \n");
     }
     return 0;
 }
