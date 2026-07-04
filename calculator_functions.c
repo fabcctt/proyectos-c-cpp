@@ -3,7 +3,7 @@ float sum(float a, float b)
 {
     return a + b;
 }
-float rest(float a, float b)
+float sub(float a, float b)
 {
     return a - b;
 }
@@ -23,7 +23,7 @@ int main(void)
 
    printf("Choose the operation.\n");
    printf("1.Sum.\n");
-   printf("2.Rest.\n");
+   printf("2.Sub.\n");
    printf("3.Divide.\n");
    printf("4.Multiply.\n");
    scanf("%d", &option);
@@ -42,7 +42,7 @@ int main(void)
         break;
 
         case 2:
-        printf("Calculation: %.2f - %.2f: %.2f", num1, num2, rest(num1, num2));
+        printf("Calculation: %.2f - %.2f: %.2f", num1, num2, sub(num1, num2));
         break;
 
         case 3:
