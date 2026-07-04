@@ -2,90 +2,90 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-void Registrar();
-void Iniciar_Sesion();
-void Juego();
-int numeroSecreto(void)
+void Register();
+void Log_In();
+void Game();
+int SecretNumber(void)
 {
     return rand() % 100 + 1;
 }
 
 int main(void)
 {
-    char usuario[50];
-    int contrasenia;
-    int intento_contrasenia;
+    char user[50];
+    int password;
+    int password_try;
 
-    Registrar();
-    printf("Bienvenido al juego de adivinar numero, cual sera su usuario?: ");
-    fgets(usuario, 50, stdin);
-    usuario[strcspn(usuario, "\n")] = 0;
-    printf("Bienvenido %s, cual sera la contrasenia?: ", usuario);
-    scanf("%d", &contrasenia);
+    Register();
+    printf("Welcome to the guessing game, what´s your user?: ");
+    fgets(user, 50, stdin);
+    user[strcspn(user, "\n")] = 0;
+    printf("Welcome %s, what will be your password?: ", user);
+    scanf("%d", &password);
     system("cls");
 
-    Iniciar_Sesion();
-    printf("Hola %s, cual es su contrasenia para ingresar?: ", usuario);
-    scanf("%d", &intento_contrasenia);
+    Log_In();
+    printf("Hello %s, what was you password to log in?: ", user);
+    scanf("%d", &password_try);
 
-    if (intento_contrasenia == contrasenia)
+    if (password_try == password)
     {
         system("cls");
     }
     else
     {
-        printf("Contrasenia incorrecta.\n");
-        return 0;
+        printf("Wrong password.\n");
+        return 1;
     }
 
     srand(time(NULL));
-    char resultado;
+    char result;
 
     do
     {
-        int intento = 0;
-        int contador = 0;
-        int secreto = numeroSecreto();
-        Juego();
-        while (intento != secreto)
+        int guess = 0;
+        int counter = 0;
+        int secret = SecretNumber();
+        game();
+        while (guess != secret)
         {
 
-            printf("Adivina el numero (1 al 100): ");
-            scanf("%d", &intento);
-            contador++;
+            printf("Guess the number. (1 up to 100)): ");
+            scanf("%d", &guess);
+            counter++;
     
-            if (intento == secreto)
+            if (guess == secret)
             {
-                printf("Acertastes. El numero era %d, Intentastes: %d veces.\n", secreto, contador);
+                printf("You did it. The secret number was: %d\n", secreto, contador);
             }
             else
             {
-                if (intento > secreto)
+                if (guess > secret)
                 {
-                    printf("Numero Alto.\n");
+                    printf("High Number.\n");
                 }
                 else
                 {
-                    printf("Numero bajo.\n");
+                    printf("Low Number.\n");
                 }
             }
         }
-        printf("Quieres jugar otra vez? (s/n): ");
-        scanf(" %c", &resultado);
-    } while (resultado == 's');
+        printf("You wanna play again? (y/n): ");
+        scanf(" %c", &result);
+    } while (result == 'y');
     return 0;
 }
-void Registrar()
+void Register()
 {
-    printf("=======Registrar=======\n");
+    printf("=======Register=======\n");
 }
 
 void Iniciar_Sesion()
 {
-    printf("=======Iniciar_Sesion=======\n");
+    printf("=======Log_In=======\n");
 }
 
-void Juego()
+void Game()
 {
-    printf("=======Juego de adivinar numero=======\n");
+    printf("=======Guessing number Game=======\n");
 }
