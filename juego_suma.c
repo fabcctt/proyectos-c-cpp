@@ -1,22 +1,22 @@
 #include <stdio.h>
-int sumar(int a, int b)
+int addition(int a, int b)
 {
     return a + b;
 }
 int main(void)
 {
-   int respuesta, suma;
-   printf("Cuanto es 5 + 5?\n");
-   scanf("%d", &respuesta);
-   suma = sumar(5, 5);
+   int answer, add;
+   printf("How much is 5 + 5?\n");
+   scanf("%d", &answer);
+   add = addition(5, 5);
 
-   if (respuesta == suma)
+   if (answer == add)
    {
-    printf("Acertastes, El resultado es %d\n", suma);
+    printf("You did it. The answer was: %d\n", add);
    }
    else
    {
-    printf("Errastes.\n");
+    printf("Wrong.\n");
    }
 
     return 0;
