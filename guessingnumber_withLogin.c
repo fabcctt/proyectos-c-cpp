@@ -77,12 +77,12 @@ int main(void)
 }
 void sign_up()
 {
-    printf("=======Register=======\n");
+    printf("=======Sign Up=======\n");
 }
 
 void log_in()
 {
-    printf("=======Log_In=======\n");
+    printf("=======Log In=======\n");
 }
 
 void game()
