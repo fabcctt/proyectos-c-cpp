@@ -17,7 +17,6 @@ Following:
 
 ### C++ (`/cpp`)
 - `login.cpp` — login system using `std::string` and functions
-- `vector.cpp` — calculator using `std::vector`
 - `vector_practice.cpp` — practice reading user input into a `std::vector`
 
 ## Goals
