@@ -1,22 +1,25 @@
 #include <iostream>
-#include <string>
+#include <cstring>
 #include <cstdlib>
-void verify_user(std::string verifiedUser, std::string user);
+void verify_user(char verifiedUser [50], char user[50]);
 void verify_password(std::string verifiedPassword, std::string password);
 int main()
 {
-    std::string user;
+    char user [50];
+    char verifiedUser [50];
     std::string password;
-    std::string verifiedUser, verifiedPassword;
+    std::string verifiedPassword;
     std::cout << "Welcome, What´s your username?: ";
-    std::cin >> user;
+    fgets(user, sizeof(user), stdin);
+    user[strcspn(user, "\n")] = 0;
     std::cout << "Hello " << user << ", " << "What´s your password?: ";
     std::cin >> password;
     std::cout << "==Welcome to Log In.==\n";
     std::cout << "What was your username?: \n";
-    std::cin >> verifiedUser;
+    std::cin.ignore();
+    fgets(verifiedUser, sizeof(verifiedUser), stdin);
+    verifiedUser[strcspn(verifiedUser, "\n")] = 0;
     verify_user(verifiedUser, user);
-
     std::cout << "What was your password?: ";
     std::cin >> verifiedPassword;
     verify_password(verifiedPassword, password);
@@ -24,9 +27,9 @@ int main()
     return 0;
 }
 
-void verify_user(std::string verifiedUser, std::string user)
+void verify_user(char verifiedUser [50], char user[50])
 {
-    if (verifiedUser == user)
+    if (strcmp(verifiedUser, user) == 0)
     {
         std::cout << "Correct username.\n";
     }
