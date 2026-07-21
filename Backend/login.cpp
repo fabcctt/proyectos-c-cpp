@@ -9,10 +9,10 @@ int main()
     char verifiedUser [50];
     std::string password;
     std::string verifiedPassword;
-    std::cout << "Welcome, What´s your username?: ";
+    std::cout << "Welcome, Whats your username?: ";
     fgets(user, sizeof(user), stdin);
     user[strcspn(user, "\n")] = 0;
-    std::cout << "Hello " << user << ", " << "What´s your password?: ";
+    std::cout << "Hello " << user << ", " << "Whats your password?: ";
     std::cin >> password;
     std::cout << "==Welcome to Log In.==\n";
     std::cout << "What was your username?: \n";
